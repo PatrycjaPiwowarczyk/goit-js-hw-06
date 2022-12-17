@@ -12,9 +12,10 @@ const createBoxes = (amount) => {
   for (let i = 1; i <= amount; i++) {
     const newBox = document.createElement("div");
     boxesBox.append(newBox);
-    let sizer = 20 + i * 10;
-    newBox.style.width = `${sizer}px`;
-    newBox.style.height = `${sizer}px`;
+    newBox.classList.add("newbox");
+    const newBoxes = document.querySelectorAll(".newbox").length - 1;
+    newBox.style.width = `${30 + newBoxes * 10}px`;
+    newBox.style.height = `${30 + newBoxes * 10}px`;
     newBox.style.backgroundColor = getRandomHexColor();
   }
 };

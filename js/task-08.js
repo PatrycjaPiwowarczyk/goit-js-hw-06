@@ -8,7 +8,11 @@ const formChecking = (event) => {
   if (email.value === "" || password.value === "") {
     return window.alert("Please fill all the fields");
   }
-  console.log(`{${email.name}: ${email.value}, ${password.name}: ${password.value}}`);
+  const userData = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(userData);
   event.currentTarget.reset();
 };
 
